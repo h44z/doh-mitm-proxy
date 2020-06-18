@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  doh-proxy:
+    container_name: doh-proxy
+    environment:  # possibility to override config.yml values
+      - CORE_STRIP_ESNI=true
+    image: docker.uibk.ac.at/h44z/networksecurity-seminarthesis:master
+    restart: on-failure

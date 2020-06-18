@@ -1,0 +1,15 @@
+core:
+  listen_address: ~ # empty strings in yaml: either ~ or '' or null
+  listen_port: 8080
+  request_path: /dns-query
+  #cert: out/server.crt
+  #key: out/server.key
+  verbose: true
+  edns: true
+  strip_esni: true
+
+upstream:
+  host: 1.1.1.1:853
+  timeout: 10s
+  protocol: DOT
+  allow_insecure: true
